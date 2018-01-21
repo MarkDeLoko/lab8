@@ -1,0 +1,29 @@
+apply plugin: 'java'
+
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+jar {
+    baseName = 'M_Gradle'
+    version =  '0.1.0'
+}
+
+
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:3.8.1"
+    compile "com.google.zxing:core:2.2"
+    compile "com.google.zxing:javase:2.2"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
+
+
+ 
